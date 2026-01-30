@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 8 - Internadda Academy</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Internadda Academy</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="mcq-test.html">Practice Tests</a></li>
+                </ul>
+                
+                <div class="nav-user">
+                    <div class="user-dropdown">
+                        <button class="user-toggle">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <span id="userName">User Name</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-user"></i> My Profile
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" id="logoutBtn" class="dropdown-item">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Class Header -->
+    <section class="class-header">
+        <div class="container">
+            <div class="class-breadcrumb">
+                <a href="index.html">Home</a> > 
+                <a href="#classes">Classes</a> > 
+                <span>Class 8</span>
+            </div>
+            
+            <div class="class-hero">
+                <div class="class-info">
+                    <h1>Class 8 Foundation Course</h1>
+                    <p class="class-subtitle">Build strong fundamentals in Mathematics, Science, and English for future success</p>
+                    
+                    <div class="class-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>200+ Hours of Content</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-book"></i>
+                            <span>4 Subjects</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>1000+ Practice Questions</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Expert Educators</span>
+                        </div>
+                    </div>
+                    
+                    <div class="class-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.5 (1,200 reviews)</span>
+                    </div>
+                    
+                    <div class="class-pricing">
+                        <div class="pricing-current">
+                            <span class="price">₹2,999</span>
+                            <span class="period">/year</span>
+                        </div>
+                        <div class="pricing-original">
+                            <del>₹4,999</del>
+                            <span class="discount">40% OFF</span>
+                        </div>
+                    </div>
+                    
+                    <div class="class-actions">
+                        <button id="enrollClass8" class="btn btn-primary btn-lg">
+                            <i class="fas fa-shopping-cart"></i> Enroll Now
+                        </button>
+                        <button class="btn btn-outline btn-lg" id="trialClass8">
+                            <i class="fas fa-play-circle"></i> Start Free Trial
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="class-preview">
+                    <div class="preview-video">
+                        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Class 8 Preview">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <p class="preview-text">Watch sample lesson: Introduction to Algebra</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="course-details">
+        <div class="container">
+            <div class="details-tabs">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="curriculum">Curriculum</button>
+                <button class="tab-btn" data-tab="instructor">Instructors</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+            
+            <div class="details-content">
+                <!-- Overview Tab -->
+                <div class="tab-pane active" id="overview">
+                    <div class="overview-grid">
+                        <div class="overview-col">
+                            <h3>Course Description</h3>
+                            <p>This comprehensive Class 8 course is designed to build a strong foundation in core subjects. Our expert educators make learning engaging and effective with interactive lessons, practical examples, and regular assessments.</p>
+                            <p>Perfect for CBSE, ICSE, and State Board students looking to excel in academics and prepare for future competitive exams.</p>
+                            
+                            <h3>What You'll Learn</h3>
+                            <ul class="learn-list">
+                                <li><i class="fas fa-check-circle"></i> Strong foundation in Mathematics concepts</li>
+                                <li><i class="fas fa-check-circle"></i> Understanding of Scientific principles</li>
+                                <li><i class="fas fa-check-circle"></i> Improved English grammar and writing skills</li>
+                                <li><i class="fas fa-check-circle"></i> Knowledge of Social Studies concepts</li>
+                                <li><i class="fas fa-check-circle"></i> Problem-solving and analytical thinking</li>
+                                <li><i class="fas fa-check-circle"></i> Regular assessments and progress tracking</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="overview-col">
+                            <div class="features-box">
+                                <h3>Course Features</h3>
+                                <div class="feature-item">
+                                    <i class="fas fa-video"></i>
+                                    <div>
+                                        <h4>200+ Video Lessons</h4>
+                                        <p>High-quality recorded lectures</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div>
+                                        <h4>Downloadable Notes</h4>
+                                        <p>PDF notes for all chapters</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    <div>
+                                        <h4>Practice Tests</h4>
+                                        <p>Chapter-wise and full syllabus tests</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <i class="fas fa-question-circle"></i>
+                                    <div>
+                                        <h4>Doubt Support</h4>
+                                        <p>24/7 doubt solving sessions</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <div>
+                                        <h4>Completion Certificate</h4>
+                                        <p>Get certified upon completion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Curriculum Tab -->
+                <div class="tab-pane" id="curriculum">
+                    <h3>Class 8 Curriculum</h3>
+                    <div class="accordion">
+                        <!-- Mathematics -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Mathematics</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="chapter-list">
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Rational Numbers</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 30m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Linear Equations in One Variable</span>
+                                        </div>
+                                        <span class="chapter-duration">6 Lessons • 3h 15m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Understanding Quadrilaterals</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 10m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Data Handling</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 45m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Squares and Square Roots</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 20m</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Science -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Science</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="chapter-list">
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Crop Production and Management</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 15m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Microorganisms: Friend and Foe</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 45m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Synthetic Fibres and Plastics</span>
+                                        </div>
+                                        <span class="chapter-duration">3 Lessons • 1h 50m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Materials: Metals and Non-Metals</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 20m</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- English -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>English</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="chapter-list">
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Grammar: Tenses</span>
+                                        </div>
+                                        <span class="chapter-duration">6 Lessons • 3h 10m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Comprehension Skills</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 45m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Writing: Letters & Essays</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 30m</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Science -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Social Science</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="chapter-list">
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>The Indian Constitution</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 15m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>From Trade to Territory</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 50m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Resources</span>
+                                        </div>
+                                        <span class="chapter-duration">3 Lessons • 1h 45m</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section (Hidden until user clicks Enroll) -->
+    <div id="paymentModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Enroll in Class 8 Course</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="payment-summary">
+                    <h4>Order Summary</h4>
+                    <div class="summary-item">
+                        <span>Class 8 Foundation Course</span>
+                        <span>₹2,999</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Discount (40%)</span>
+                        <span>- ₹2,000</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span>₹2,999</span>
+                    </div>
+                    <div class="summary-note">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Access valid for 1 year from date of purchase</span>
+                    </div>
+                </div>
+                
+                <div class="payment-options">
+                    <h4>Select Payment Method</h4>
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="paymentMethod" value="upi" checked>
+                            <div class="method-content">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>UPI</span>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-method">
+                            <input type="radio" name="paymentMethod" value="card">
+                            <div class="method-content">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Credit/Debit Card</span>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-method">
+                            <input type="radio" name="paymentMethod" value="netbanking">
+                            <div class="method-content">
+                                <i class="fas fa-university"></i>
+                                <span>Net Banking</span>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-method">
+                            <input type="radio" name="paymentMethod" value="wallet">
+                            <div class="method-content">
+                                <i class="fas fa-wallet"></i>
+                                <span>Wallet</span>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <button id="proceedPayment" class="btn btn-primary btn-block btn-lg">
+                        <i class="fas fa-lock"></i> Proceed to Pay ₹2,999
+                    </button>
+                    
+                    <p class="payment-security">
+                        <i class="fas fa-shield-alt"></i>
+                        Your payment is secured with 256-bit SSL encryption
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 Internadda Academy. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/supabase.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/payment.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

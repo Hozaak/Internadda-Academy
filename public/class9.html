@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 - Internadda Academy</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Internadda Academy</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="mcq-test.html">Practice Tests</a></li>
+                </ul>
+                
+                <div class="nav-user">
+                    <div class="user-dropdown">
+                        <button class="user-toggle">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <span id="userName">User Name</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-user"></i> My Profile
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" id="logoutBtn" class="dropdown-item">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Class Header -->
+    <section class="class-header">
+        <div class="container">
+            <div class="class-breadcrumb">
+                <a href="index.html">Home</a> > 
+                <a href="#classes">Classes</a> > 
+                <span>Class 9</span>
+            </div>
+            
+            <div class="class-hero">
+                <div class="class-info">
+                    <h1>Class 9 Comprehensive Course</h1>
+                    <p class="class-subtitle">Master CBSE/ICSE curriculum with conceptual clarity and practical applications</p>
+                    
+                    <div class="class-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>250+ Hours of Content</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-book"></i>
+                            <span>4 Core Subjects</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>1200+ Practice Questions</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Expert Educators</span>
+                        </div>
+                    </div>
+                    
+                    <div class="class-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.6 (980 reviews)</span>
+                    </div>
+                    
+                    <div class="class-pricing">
+                        <div class="pricing-current">
+                            <span class="price">₹3,499</span>
+                            <span class="period">/year</span>
+                        </div>
+                        <div class="pricing-original">
+                            <del>₹5,499</del>
+                            <span class="discount">36% OFF</span>
+                        </div>
+                    </div>
+                    
+                    <div class="class-actions">
+                        <button id="enrollClass9" class="btn btn-primary btn-lg">
+                            <i class="fas fa-shopping-cart"></i> Enroll Now
+                        </button>
+                        <button class="btn btn-outline btn-lg" id="trialClass9">
+                            <i class="fas fa-play-circle"></i> Start Free Trial
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="class-preview">
+                    <div class="preview-video">
+                        <img src="https://images.unsplash.com/photo-1456513080510-3445095d1a6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Class 9 Preview">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <p class="preview-text">Watch sample lesson: Laws of Motion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="course-details">
+        <div class="container">
+            <div class="details-tabs">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="curriculum">Curriculum</button>
+                <button class="tab-btn" data-tab="instructor">Instructors</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+            
+            <div class="details-content">
+                <!-- Overview Tab -->
+                <div class="tab-pane active" id="overview">
+                    <div class="overview-grid">
+                        <div class="overview-col">
+                            <h3>Course Description</h3>
+                            <p>Class 9 is a crucial year that forms the foundation for board exams and competitive tests. Our course provides in-depth coverage of all subjects with emphasis on conceptual understanding, practical applications, and problem-solving skills.</p>
+                            <p>Designed as per latest CBSE and ICSE syllabus, with additional enrichment material for advanced learners.</p>
+                            
+                            <h3>What You'll Learn</h3>
+                            <ul class="learn-list">
+                                <li><i class="fas fa-check-circle"></i> Advanced Mathematics concepts</li>
+                                <li><i class="fas fa-check-circle"></i> Fundamental principles of Physics</li>
+                                <li><i class="fas fa-check-circle"></i> Chemical reactions and equations</li>
+                                <li><i class="fas fa-check-circle"></i> Biological systems and processes</li>
+                                <li><i class="fas fa-check-circle"></i> Critical thinking and analytical skills</li>
+                                <li><i class="fas fa-check-circle"></i> Exam preparation strategies</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="overview-col">
+                            <div class="features-box">
+                                <h3>Course Features</h3>
+                                <div class="feature-item">
+                                    <i class="fas fa-video"></i>
+                                    <div>
+                                        <h4>250+ Video Lessons</h4>
+                                        <p>Comprehensive coverage of syllabus</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div>
+                                        <h4>Chapter-wise Notes</h4>
+                                        <p>Detailed PDF notes for each chapter</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    <div>
+                                        <h4>30+ Practice Tests</h4>
+                                        <p>Regular assessments and mock exams</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <i class="fas fa-question-circle"></i>
+                                    <div>
+                                        <h4>Weekly Doubt Sessions</h4>
+                                        <p>Live Q&A with educators</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <i class="fas fa-tasks"></i>
+                                    <div>
+                                        <h4>Assignment & Projects</h4>
+                                        <p>Practical assignments for better understanding</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Curriculum Tab -->
+                <div class="tab-pane" id="curriculum">
+                    <h3>Class 9 Curriculum</h3>
+                    <div class="accordion">
+                        <!-- Mathematics -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Mathematics</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="chapter-list">
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Number Systems</span>
+                                        </div>
+                                        <span class="chapter-duration">6 Lessons • 3h 15m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Polynomials</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 45m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Coordinate Geometry</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 20m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Linear Equations in Two Variables</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 50m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Introduction to Euclid's Geometry</span>
+                                        </div>
+                                        <span class="chapter-duration">3 Lessons • 1h 45m</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Physics -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Physics</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="chapter-list">
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Motion</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 45m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Force and Laws of Motion</span>
+                                        </div>
+                                        <span class="chapter-duration">6 Lessons • 3h 15m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Gravitation</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 20m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Work and Energy</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 45m</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Chemistry -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Chemistry</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="chapter-list">
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Matter in Our Surroundings</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 15m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Is Matter Around Us Pure</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 45m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Atoms and Molecules</span>
+                                        </div>
+                                        <span class="chapter-duration">6 Lessons • 3h 10m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Structure of the Atom</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 50m</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Biology -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Biology</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="chapter-list">
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>The Fundamental Unit of Life</span>
+                                        </div>
+                                        <span class="chapter-duration">5 Lessons • 2h 45m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Tissues</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 20m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Diversity in Living Organisms</span>
+                                        </div>
+                                        <span class="chapter-duration">6 Lessons • 3h 15m</span>
+                                    </li>
+                                    <li>
+                                        <div class="chapter-info">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span>Why Do We Fall Ill</span>
+                                        </div>
+                                        <span class="chapter-duration">4 Lessons • 2h 15m</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 Internadda Academy. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/supabase.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/payment.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

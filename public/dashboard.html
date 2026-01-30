@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Internadda Academy</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.35.0/dist/apexcharts.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Internadda Academy</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#exams">Exams</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="mcq-test.html">Practice Tests</a></li>
+                </ul>
+                
+                <div class="nav-user">
+                    <div class="user-dropdown">
+                        <button class="user-toggle">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <span id="userName">User Name</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="dashboard.html" class="dropdown-item">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-user"></i> My Profile
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-cog"></i> Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" id="logoutBtn" class="dropdown-item">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <div class="welcome-message">
+                    <h1>Welcome back, <span id="dashboardUserName">Student</span>! 👋</h1>
+                    <p>Track your progress and continue learning</p>
+                </div>
+                <div class="dashboard-actions">
+                    <button class="btn btn-primary" id="startLearningBtn">
+                        <i class="fas fa-play-circle"></i> Continue Learning
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Stats Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon bg-blue">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="coursesEnrolled">0</h3>
+                        <p>Courses Enrolled</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon bg-green">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="testsAttempted">0</h3>
+                        <p>Tests Attempted</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon bg-orange">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="averageScore">0%</h3>
+                        <p>Average Score</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon bg-purple">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="studyTime">0h</h3>
+                        <p>Study Time</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid">
+                <!-- Left Column -->
+                <div class="dashboard-col">
+                    <!-- Progress Chart -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Your Progress</h3>
+                            <select id="progressFilter" class="filter-select">
+                                <option value="weekly">This Week</option>
+                                <option value="monthly">This Month</option>
+                                <option value="yearly">This Year</option>
+                            </select>
+                        </div>
+                        <div class="card-body">
+                            <div id="progressChart"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Tests -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Recent Tests</h3>
+                            <a href="mcq-test.html" class="view-all">View All</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Test Name</th>
+                                            <th>Date</th>
+                                            <th>Score</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recentTestsBody">
+                                        <!-- Filled by JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="dashboard-col">
+                    <!-- Enrolled Courses -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>My Courses</h3>
+                            <a href="#classes" class="view-all">Browse Courses</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="courses-list" id="enrolledCourses">
+                                <!-- Filled by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Upcoming Tests -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Upcoming Tests</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="upcoming-tests" id="upcomingTests">
+                                <!-- Filled by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="quick-actions">
+                                <a href="mcq-test.html" class="quick-action">
+                                    <div class="action-icon bg-blue">
+                                        <i class="fas fa-play-circle"></i>
+                                    </div>
+                                    <span>Take a Test</span>
+                                </a>
+                                
+                                <a href="notes.html" class="quick-action">
+                                    <div class="action-icon bg-green">
+                                        <i class="fas fa-download"></i>
+                                    </div>
+                                    <span>Download Notes</span>
+                                </a>
+                                
+                                <a href="#" class="quick-action" id="bookDoubtBtn">
+                                    <div class="action-icon bg-orange">
+                                        <i class="fas fa-question-circle"></i>
+                                    </div>
+                                    <span>Book Doubt Session</span>
+                                </a>
+                                
+                                <a href="#" class="quick-action">
+                                    <div class="action-icon bg-purple">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <span>Study Plan</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recommendations -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Recommended For You</h3>
+                </div>
+                <div class="card-body">
+                    <div class="recommendations-grid" id="recommendations">
+                        <!-- Filled by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2023 Internadda Academy. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.35.0/dist/apexcharts.min.js"></script>
+    <script src="../assets/js/supabase.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
